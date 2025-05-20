@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Ravi | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --pastel-blue: #a3d5ff;
+      --pastel-purple: #e0bbff;
+      --text-dark: #333;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: url('https://www.transparenttextures.com/patterns/circles.png'), linear-gradient(to right, var(--pastel-blue), var(--pastel-blue));
+      background-blend-mode: overlay;
+      background-repeat: repeat;
+      color: var(--text-dark);
+    }
+    header {
+      background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-blue));
+      color: #000;
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      position: relative;
+    }
+    nav {
+      background: #2c2c2c;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    .nav-button {
+      background: var(--pastel-blue);
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6f61;
+    }
+    section {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    section.active {
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #444;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #6a1b9a;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .contact a {
+      color: #333;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+      color: #0077b5;
+    }
+    footer {
+      background: linear-gradient(135deg, #dcd6f7, #e4f9f5);
+      color: var(--text-dark);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9em;
+    }
+    .linkedin-icon {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      color: #0077b5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="text-transform: uppercase; margin-bottom: 0.5rem;"><i class="fas fa-code"></i> ROHAN RAVI <i class="fas fa-terminal"></i></h1>
+    <p>Data Analyst | Machine Learning Enthusiast</p>
+    <div class="contact" style="margin-top: 1rem;">
+      <p>Mount Pleasant, MI | (224)-578-2028 | <a href="mailto:rohanc261@gmail.com">rohanc261@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/rohan-chandran/" target="_blank">
+          <i class="fab fa-linkedin linkedin-icon"></i>Rohan Ravi
+        </a>
+      </p>
+    </div>
+  </header>
+
+  <nav>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; align-items: center;">
+      <div class="nav-button">
+        <a href="#" onclick="showSection('home')" style="display: flex; flex-direction: column; align-items: center;"><i class="fas fa-home"></i><span>Home</span></a>
+      </div>
+      <div class="nav-button">
+        <a href="#" onclick="showSection('education')" style="display: flex; flex-direction: column; align-items: center;"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+      </div>
+      <div class="nav-button">
+        <a href="#" onclick="showSection('skills')" style="display: flex; flex-direction: column; align-items: center;"><i class="fas fa-tools"></i><span>Skills</span></a>
+      </div>
+      <div class="nav-button">
+        <a href="#" onclick="showSection('experience')" style="display: flex; flex-direction: column; align-items: center;"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+      </div>
+      <div class="nav-button">
+        <a href="#" onclick="showSection('projects')" style="display: flex; flex-direction: column; align-items: center;"><i class="fas fa-project-diagram"></i><span>Projects</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Hello! I'm Rohan Ravi, a passionate Data Analyst and Machine Learning Enthusiast with experience in predictive modeling, ETL automation, and data visualization.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Central Michigan University</strong> – M.S. in Information Systems (Aug 2023 – May 2025)</li>
+      <li><strong>Jawaharlal Nehru Technological University</strong> – B.Tech in Electronics & Communication (2017–2021)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <p><strong>Languages:</strong> Java, Python, C/C++, SQL, HTML/CSS, R, SAS</p>
+    <p><strong>Databases/Cloud:</strong> MySQL, PostgreSQL, Hadoop, Kafka, Snowflake, BigQuery, AWS, GCP, Azure, Databricks</p>
+    <p><strong>Tools:</strong> Git, Docker, Kubernetes, VS Code, PyCharm, Jupyter, Microsoft Office</p>
+    <p><strong>ML:</strong> Pandas, NumPy, Scikit-Learn, TensorFlow, PyTorch, XGBoost, NLP, A/B Testing</p>
+    <p><strong>Visualization:</strong> Tableau, Power BI, Looker, Matplotlib, Seaborn, ggplot</p>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <h3>Data Analyst – Tata Consultancy Services</h3>
+    <p><em>Nov 2021 – Jan 2023, Hyderabad, India</em></p>
+    <ul>
+      <li>Processed 5M+ records using SQL/Python, improving speed by 40%.</li>
+      <li>Automated ETL pipelines, increasing accuracy by 20%.</li>
+      <li>Built Tableau dashboards cutting report time from 3 days to 1 hour.</li>
+      <li>Achieved 87% churn model accuracy with Random Forest/Logistic Regression.</li>
+    </ul>
+    <h3>Data Science Intern – Matchwell Technologies</h3>
+    <p><em>Jun 2020 – Jun 2021, Hyderabad, India</em></p>
+    <ul>
+      <li>Preprocessed large datasets, boosting prediction accuracy by 20%.</li>
+      <li>Automated 200+ ML pipelines, speeding deployment by 40%.</li>
+      <li>Built dashboards with Plotly and Scikit-learn for business insights.</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Real-Time Fraud Detection System</h3>
+    <ul>
+      <li>Used Python, MySQL, AWS Lambda to reduce fraud detection time by 40%.</li>
+      <li>Improved accuracy with Random Forest/XGBoost and real-time alerts.</li>
+    </ul>
+    <h3>Bank Customer Churn Prediction</h3>
+    <ul>
+      <li>Built pipeline using Scikit-learn and Seaborn; achieved 86% accuracy.</li>
+      <li>Enhanced campaign targeting using EDA insights and behavioral data.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rohan Ravi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let activeSection = document.querySelector('section.active');
+    function showSection(id) {
+      const newSection = document.getElementById(id);
+      if (newSection === activeSection) return;
+      if (activeSection) {
+        activeSection.classList.remove('active');
+      }
+      newSection.classList.add('active');
+      activeSection = newSection;
+    }
+  </script>
+</body>
+</html>
